@@ -143,7 +143,14 @@ namespace LibraryForTOTP
 
                     if (j < splitedtext[i].Length)
                     {
-                        piece |= (uint)CharToInt(splitedtext[i][j]);
+                        if (CharToInt(splitedtext[i][j]) < 0)
+                        {
+                            throw new FormatException("Letter not appropriate");
+                        }
+                        else
+                        {
+                            piece |= (uint)CharToInt(splitedtext[i][j]);
+                        }
                     }
                 }
                 for (int j = 0; j < 5; j++)
