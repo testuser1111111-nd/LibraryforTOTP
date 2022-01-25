@@ -165,7 +165,7 @@ namespace LibraryForTOTP
             }
             return decoded.ToArray();
         }
-        public const string table = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
+        public const char[] table = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
         public static string ToBase32String(byte[] data, char padding = '=')
         {
             const uint mask = 31;
