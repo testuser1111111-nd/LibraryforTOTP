@@ -1,7 +1,9 @@
 # LibraryforTOTP
 
-contains below things
+以下のものを含んでます
 
- * base32 decoder/encoder
- * TOTP and HOTP generator
- * ugly code
+csファイルだけダウンロードしたらいいと思います
+
+ * base32 デコード/エンコード
+ * TOTP と HOTP の生成器
+ * 汚いコード
