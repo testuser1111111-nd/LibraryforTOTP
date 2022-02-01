@@ -197,7 +197,6 @@ namespace LibraryForTOTP
                     {
                         encoded.Append(padding);
                     }
-
                 }
             }
             return encoded.ToString();
