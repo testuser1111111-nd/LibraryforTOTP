@@ -8,7 +8,6 @@ namespace LibraryForTOTP
     {
         public static int GenTOTP(byte[] S, int adjust = 0, int span = 30)
         {
-
             TimeSpan time = DateTime.UtcNow - new DateTime(1970, 1, 1);
             var counter = (long)time.TotalSeconds / span;
             return GenHOTP(S, counter + adjust);
@@ -100,7 +99,6 @@ namespace LibraryForTOTP
                 case '7': return 31;
                 default: return -1;
             }
-
         }
         public static byte[] FromBase32String(string base32text, char padding = '=')
         {
@@ -138,9 +136,7 @@ namespace LibraryForTOTP
                 ulong piece = 0;
                 for (int j = 0; j < cutlength; j++)
                 {
-
                     piece <<= 5;
-
                     if (j < splitedtext[i].Length)
                     {
                         if (CharToInt(splitedtext[i][j]) < 0)
@@ -193,7 +189,6 @@ namespace LibraryForTOTP
                         case 3: finallength = 5; break;
                         case 4: finallength = 7; break;
                     }
-
                     if (i < divideinto - 1 | (i == divideinto - 1 && j < finallength))
                     {
                         encoded.Append(table[(int)((temp >> 5 * (7 - j)) & mask)]);
