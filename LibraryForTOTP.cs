@@ -94,7 +94,6 @@ namespace LibraryForTOTP
                     {
                         decoded.Add((byte)aaa);
                     }
-
                 }
             }
             return decoded.ToArray();
