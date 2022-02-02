@@ -35,7 +35,8 @@ namespace LibraryForTOTP
     }
     public static class RFC4648Base32
     {
-        public const char[] table = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
+        const string tablestring = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
+        private static char[] table = tablestring.ToCharArray();
         public static int CharToInt(char c) => Array.IndexOf(table,Char.ToUpper(c));
         public static byte[] FromBase32String(string base32text, char padding = '=')
         {
