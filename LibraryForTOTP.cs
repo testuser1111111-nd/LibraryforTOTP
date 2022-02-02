@@ -102,7 +102,16 @@ namespace LibraryForTOTP
         {
             const uint mask = 31;
             int divideinto = data.Length % 5 == 0 ? data.Length / 5 : data.Length / 5 + 1;
-            StringBuilder encoded = new StringBuilder();
+            StringBuilder encoded = new StringBuilder();            
+            int finallength = 8;
+            switch (data.Length % 5)
+            {
+                case 0: finallength = 8; break;
+                case 1: finallength = 2; break;
+                case 2: finallength = 4; break;
+                case 3: finallength = 5; break;
+                case 4: finallength = 7; break;
+            }
             for (int i = 0; i < divideinto; i++)
             {
                 ulong temp = 0;
@@ -116,15 +125,6 @@ namespace LibraryForTOTP
                 }
                 for (int j = 0; j < 8; j++)
                 {
-                    int finallength = 8;
-                    switch (data.Length % 5)
-                    {
-                        case 0: finallength = 8; break;
-                        case 1: finallength = 2; break;
-                        case 2: finallength = 4; break;
-                        case 3: finallength = 5; break;
-                        case 4: finallength = 7; break;
-                    }
                     if (i < divideinto - 1 | (i == divideinto - 1 && j < finallength))
                     {
                         encoded.Append(table[(int)((temp >> 5 * (7 - j)) & mask)]);
