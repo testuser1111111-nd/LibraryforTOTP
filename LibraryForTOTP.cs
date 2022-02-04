@@ -54,7 +54,7 @@ namespace LibraryForTOTP
                 splitedtext[i] = base32text.Substring(0, cutlength < base32text.Length ? cutlength : base32text.Length);
                 base32text = base32text.Substring(cutlength < base32text.Length ? cutlength : base32text.Length);
             }
-            List<byte> decoded = new List<byte>();
+            LinkedList<byte> decoded = new LinkedList<byte>();
             int len3 = 0;
             int len4 = splitedtext[splitedtext.Length - 1].Length;
 
@@ -92,7 +92,7 @@ namespace LibraryForTOTP
                     ulong aaa = (piece >> (4 - j) * 8) & 255;
                     if (i != splitedtext.Length - 1 | j < len3)
                     {
-                        decoded.Add((byte)aaa);
+                        decoded.AddLast((byte)aaa);
                     }
                 }
             }
