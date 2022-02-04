@@ -51,8 +51,10 @@ namespace LibraryForTOTP
             string[] splitedtext = new string[len2];
             for (int i = 0; i < splitedtext.Length; i++)
             {
-                splitedtext[i] = base32text.Substring(0, cutlength < base32text.Length ? cutlength : base32text.Length);
-                base32text = base32text.Substring(cutlength < base32text.Length ? cutlength : base32text.Length);
+                for(int j = i*8; j< (base32text.Length>(i+1)*8?(i+1)*8:base32text.Length);j++)
+                {
+                    splitedtext[i] += base32text[j];
+                }
             }
             LinkedList<byte> decoded = new LinkedList<byte>();
             int len3 = 0;
