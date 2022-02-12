@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tbsa3\\source\\repos\\LibraryForTOTP\\LibraryForTOTP.csproj",
+      "projectUniqueName": "C:\\Users\\tbsa3\\Source\\Repos\\LibraryforTOTPgithub\\LibraryForTOTP.csproj",
       "projectName": "LibraryForTOTP",
-      "projectPath": "C:\\Users\\tbsa3\\source\\repos\\LibraryForTOTP\\LibraryForTOTP.csproj",
+      "projectPath": "C:\\Users\\tbsa3\\Source\\Repos\\LibraryforTOTPgithub\\LibraryForTOTP.csproj",
       "packagesPath": "C:\\Users\\tbsa3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tbsa3\\source\\repos\\LibraryForTOTP\\obj\\",
+      "outputPath": "C:\\Users\\tbsa3\\Source\\Repos\\LibraryforTOTPgithub\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
