@@ -105,6 +105,10 @@ namespace LibraryForTOTP
         {
             const uint mask = 31;
             int divideinto = data.Length % 5 == 0 ? data.Length / 5 : data.Length / 5 + 1;
+            if((long)divideinto*8 >= (1 << 30))
+            {
+                throw new ArgumentException("data length too long");
+            }
             StringBuilder encoded = new StringBuilder(divideinto*8);            
             int finallength = 8;
             switch (data.Length % 5)
