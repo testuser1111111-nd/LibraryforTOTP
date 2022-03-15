@@ -18,4 +18,4 @@
  https://gist.github.com/erdomke/9335c394c5cc65404c4cf9aceab04143
  https://github.com/aspnet/Identity/blob/master/src/Core/Base32.cs
  
-ライセンスは、The Unlicenseを採用します。
+ライセンスは、MITライセンスを採用します。
